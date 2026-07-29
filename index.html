@@ -39,9 +39,10 @@
       Capital: { color: "#ffd24a", radius: 8 },
       City:    { color: "#ff9b3d", radius: 6 },
       Town:    { color: "#8fc7ff", radius: 5 },
+      POI:     { color: "#9be08f", radius: 5 },
       Default: { color: "#cfcfcf", radius: 5 }
     };
-    const TYPE_ORDER = ["Capital", "City", "Town"];
+    const TYPE_ORDER = ["Capital", "City", "Town", "POI"];
 
     fetch("markers.json?_=" + Date.now())
       .then(r => r.json())
@@ -81,7 +82,7 @@
           const label =
             '<span style="display:inline-block;width:11px;height:11px;border-radius:50%;' +
             'background:' + swatch + ';border:1px solid #000;margin-right:6px;' +
-            'vertical-align:middle"></span>' + t + "s";
+            'vertical-align:middle"></span>' + (t === "POI" ? "Points of Interest" : t + "s");
           overlays[label] = groups[t];
         });
         L.control.layers(null, overlays, { collapsed: false, position: "topright" }).addTo(map);
