@@ -1,0 +1,596 @@
+{
+  "image": "WorldMap.png",
+  "width": 3072,
+  "height": 2048,
+  "version": 1785336701,
+  "markers": [
+    {
+      "name": "Anvilgate",
+      "type": "Town",
+      "x": 514.0,
+      "y": 372.0
+    },
+    {
+      "name": "Anvilmere",
+      "type": "Town",
+      "x": 500.0,
+      "y": 660.0
+    },
+    {
+      "name": "Archivum",
+      "type": "City",
+      "x": 1366.67,
+      "y": 304.0
+    },
+    {
+      "name": "Ashwyk",
+      "type": "Town",
+      "x": 2068.0,
+      "y": 1038.0
+    },
+    {
+      "name": "Ashwyk Lower",
+      "type": "Town",
+      "x": 2046.0,
+      "y": 1207.0
+    },
+    {
+      "name": "Aurelin",
+      "type": "Town",
+      "x": 2228.0,
+      "y": 344.0
+    },
+    {
+      "name": "Barleymoor",
+      "type": "Town",
+      "x": 1004.0,
+      "y": 1153.03
+    },
+    {
+      "name": "Branwice",
+      "type": "City",
+      "x": 1096.0,
+      "y": 680.0
+    },
+    {
+      "name": "Brasshollow",
+      "type": "Town",
+      "x": 224.0,
+      "y": 612.0
+    },
+    {
+      "name": "Brightshore",
+      "type": "Town",
+      "x": 1810.0,
+      "y": 940.0
+    },
+    {
+      "name": "Brinehollow",
+      "type": "Town",
+      "x": 1772.0,
+      "y": 1394.06
+    },
+    {
+      "name": "Bronwin",
+      "type": "Capital",
+      "x": 1847.33,
+      "y": 633.33
+    },
+    {
+      "name": "Cadrinel",
+      "type": "Town",
+      "x": 720.0,
+      "y": 600.0
+    },
+    {
+      "name": "Caldrin",
+      "type": "Capital",
+      "x": 881.67,
+      "y": 616.0
+    },
+    {
+      "name": "Candlewick",
+      "type": "Town",
+      "x": 1610.0,
+      "y": 766.52
+    },
+    {
+      "name": "Cinderhold",
+      "type": "Town",
+      "x": 922.0,
+      "y": 305.03
+    },
+    {
+      "name": "Cipherhold",
+      "type": "Town",
+      "x": 1348.0,
+      "y": 473.03
+    },
+    {
+      "name": "Cogmarch",
+      "type": "Town",
+      "x": 402.0,
+      "y": 509.03
+    },
+    {
+      "name": "Coldwake",
+      "type": "City",
+      "x": 1628.0,
+      "y": 1212.0
+    },
+    {
+      "name": "Crossway",
+      "type": "City",
+      "x": 1930.0,
+      "y": 830.0
+    },
+    {
+      "name": "Damstead",
+      "type": "Town",
+      "x": 1165.33,
+      "y": 1596.67
+    },
+    {
+      "name": "Dawnmarch",
+      "type": "Town",
+      "x": 1403.0,
+      "y": 886.52
+    },
+    {
+      "name": "Dawnoak",
+      "type": "Town",
+      "x": 1130.0,
+      "y": 1220.0
+    },
+    {
+      "name": "Devimore",
+      "type": "City",
+      "x": 2415.33,
+      "y": 1433.33
+    },
+    {
+      "name": "Driftport",
+      "type": "City",
+      "x": 2106.33,
+      "y": 1721.81
+    },
+    {
+      "name": "Durand",
+      "type": "City",
+      "x": 802.0,
+      "y": 800.0
+    },
+    {
+      "name": "Eadanhill",
+      "type": "Town",
+      "x": 1089.33,
+      "y": 970.29
+    },
+    {
+      "name": "Ellerdale",
+      "type": "Town",
+      "x": 2501.0,
+      "y": 1586.0
+    },
+    {
+      "name": "Emberwick",
+      "type": "City",
+      "x": 426.0,
+      "y": 254.0
+    },
+    {
+      "name": "Fairhold",
+      "type": "City",
+      "x": 2527.33,
+      "y": 1277.0
+    },
+    {
+      "name": "Faldan",
+      "type": "City",
+      "x": 600.0,
+      "y": 810.0
+    },
+    {
+      "name": "Fallowold",
+      "type": "Town",
+      "x": 1310.0,
+      "y": 1430.0
+    },
+    {
+      "name": "Fronda",
+      "type": "Town",
+      "x": 2010.0,
+      "y": 690.0
+    },
+    {
+      "name": "Frostquill",
+      "type": "Town",
+      "x": 2606.0,
+      "y": 251.03
+    },
+    {
+      "name": "Frostreach",
+      "type": "City",
+      "x": 1240.0,
+      "y": 333.92
+    },
+    {
+      "name": "Gearford",
+      "type": "Town",
+      "x": 768.0,
+      "y": 425.03
+    },
+    {
+      "name": "Glasshallow",
+      "type": "Town",
+      "x": 2374.0,
+      "y": 179.03
+    },
+    {
+      "name": "Glassmere",
+      "type": "City",
+      "x": 2140.0,
+      "y": 197.92
+    },
+    {
+      "name": "Goldhollow",
+      "type": "City",
+      "x": 2247.0,
+      "y": 1734.67
+    },
+    {
+      "name": "Greenvault",
+      "type": "City",
+      "x": 1544.0,
+      "y": 430.0
+    },
+    {
+      "name": "Gullhaven",
+      "type": "Town",
+      "x": 1480.0,
+      "y": 1376.0
+    },
+    {
+      "name": "Hallowmere",
+      "type": "Town",
+      "x": 2052.0,
+      "y": 859.52
+    },
+    {
+      "name": "Harrowgate",
+      "type": "Town",
+      "x": 988.0,
+      "y": 822.06
+    },
+    {
+      "name": "Hershel Farm",
+      "type": "POI",
+      "x": 1337.5,
+      "y": 777.0
+    },
+    {
+      "name": "Hillborough",
+      "type": "Town",
+      "x": 1026.0,
+      "y": 1326.96
+    },
+    {
+      "name": "Hollowmede",
+      "type": "City",
+      "x": 1328.0,
+      "y": 1129.03
+    },
+    {
+      "name": "Ironcog",
+      "type": "City",
+      "x": 1188.0,
+      "y": 294.0
+    },
+    {
+      "name": "Irondak",
+      "type": "Town",
+      "x": 1781.67,
+      "y": 1150.48
+    },
+    {
+      "name": "Ironveil",
+      "type": "Town",
+      "x": 640.0,
+      "y": 510.0
+    },
+    {
+      "name": "Kelpford",
+      "type": "Town",
+      "x": 2032.0,
+      "y": 1462.06
+    },
+    {
+      "name": "Lindin",
+      "type": "City",
+      "x": 2121.33,
+      "y": 732.0
+    },
+    {
+      "name": "Lumenford",
+      "type": "Town",
+      "x": 1724.0,
+      "y": 548.0
+    },
+    {
+      "name": "Marrowquay",
+      "type": "Town",
+      "x": 2232.0,
+      "y": 1227.0
+    },
+    {
+      "name": "Mirrorfast",
+      "type": "Town",
+      "x": 2396.0,
+      "y": 533.92
+    },
+    {
+      "name": "Mosshedge",
+      "type": "Town",
+      "x": 1197.0,
+      "y": 798.0
+    },
+    {
+      "name": "Netherby",
+      "type": "Town",
+      "x": 1936.0,
+      "y": 1606.06
+    },
+    {
+      "name": "New Delanor",
+      "type": "City",
+      "x": 2360.0,
+      "y": 444.0
+    },
+    {
+      "name": "Oxfen",
+      "type": "Town",
+      "x": 880.0,
+      "y": 1000.0
+    },
+    {
+      "name": "Palegrave",
+      "type": "Town",
+      "x": 1120.0,
+      "y": 470.0
+    },
+    {
+      "name": "Redhollow",
+      "type": "Town",
+      "x": 1472.0,
+      "y": 1056.0
+    },
+    {
+      "name": "Rimevault",
+      "type": "City",
+      "x": 2912.0,
+      "y": 209.03
+    },
+    {
+      "name": "Saltmere",
+      "type": "Town",
+      "x": 2204.0,
+      "y": 1414.06
+    },
+    {
+      "name": "Sanctgate",
+      "type": "Town",
+      "x": 1936.0,
+      "y": 464.0
+    },
+    {
+      "name": "Scarstead",
+      "type": "Town",
+      "x": 2194.0,
+      "y": 978.0
+    },
+    {
+      "name": "Siltbridge",
+      "type": "City",
+      "x": 2360.0,
+      "y": 1670.0
+    },
+    {
+      "name": "Silverdown",
+      "type": "Town",
+      "x": 968.0,
+      "y": 1766.0
+    },
+    {
+      "name": "Silvermark",
+      "type": "Town",
+      "x": 2532.0,
+      "y": 441.03
+    },
+    {
+      "name": "Slaggate",
+      "type": "Town",
+      "x": 674.0,
+      "y": 301.03
+    },
+    {
+      "name": "Snowfield",
+      "type": "Capital",
+      "x": 2442.0,
+      "y": 788.0
+    },
+    {
+      "name": "Solhaven",
+      "type": "City",
+      "x": 1681.0,
+      "y": 952.0
+    },
+    {
+      "name": "Solhaven Upper Enclave",
+      "type": "Town",
+      "x": 2380.67,
+      "y": 359.33
+    },
+    {
+      "name": "Sparkfen",
+      "type": "Town",
+      "x": 1046.0,
+      "y": 364.0
+    },
+    {
+      "name": "Staefe",
+      "type": "City",
+      "x": 2183.0,
+      "y": 863.0
+    },
+    {
+      "name": "Stormcliff",
+      "type": "Town",
+      "x": 850.0,
+      "y": 1506.0
+    },
+    {
+      "name": "Stormcliff Lower",
+      "type": "Town",
+      "x": 1537.0,
+      "y": 1665.33
+    },
+    {
+      "name": "Sunmede",
+      "type": "City",
+      "x": 1564.0,
+      "y": 560.0
+    },
+    {
+      "name": "Sunspire",
+      "type": "Capital",
+      "x": 1712.0,
+      "y": 1584.0
+    },
+    {
+      "name": "Sunspring",
+      "type": "Town",
+      "x": 2266.33,
+      "y": 1799.33
+    },
+    {
+      "name": "Telvar Index",
+      "type": "City",
+      "x": 1724.0,
+      "y": 321.92
+    },
+    {
+      "name": "Thornwick",
+      "type": "Town",
+      "x": 588.0,
+      "y": 1112.0
+    },
+    {
+      "name": "Threadhaven",
+      "type": "Town",
+      "x": 1357.5,
+      "y": 763.5
+    },
+    {
+      "name": "Tidewick",
+      "type": "City",
+      "x": 1912.0,
+      "y": 1298.06
+    },
+    {
+      "name": "Tristtown",
+      "type": "Town",
+      "x": 1400.0,
+      "y": 1520.0
+    },
+    {
+      "name": "Vellumford",
+      "type": "Town",
+      "x": 2284.0,
+      "y": 690.0
+    },
+    {
+      "name": "Vesperfield",
+      "type": "Town",
+      "x": 1780.0,
+      "y": 728.0
+    },
+    {
+      "name": "Veylight",
+      "type": "City",
+      "x": 2600.0,
+      "y": 600.0
+    },
+    {
+      "name": "Veylight Commons",
+      "type": "Town",
+      "x": 2534.0,
+      "y": 735.0
+    },
+    {
+      "name": "Wardencross",
+      "type": "City",
+      "x": 1342.5,
+      "y": 775.5
+    },
+    {
+      "name": "Wardencross Muster Camp",
+      "type": "POI",
+      "x": 1342.0,
+      "y": 780.5
+    },
+    {
+      "name": "Westcaldera",
+      "type": "City",
+      "x": 880.0,
+      "y": 520.0
+    },
+    {
+      "name": "Whiteckber",
+      "type": "Town",
+      "x": 2329.33,
+      "y": 1592.33
+    },
+    {
+      "name": "Whitefold",
+      "type": "City",
+      "x": 2268.0,
+      "y": 568.0
+    },
+    {
+      "name": "Whitefold Annex",
+      "type": "Town",
+      "x": 2700.0,
+      "y": 500.0
+    },
+    {
+      "name": "Wilscare",
+      "type": "Town",
+      "x": 1430.0,
+      "y": 1312.96
+    },
+    {
+      "name": "Wintergloss",
+      "type": "City",
+      "x": 1414.0,
+      "y": 641.03
+    },
+    {
+      "name": "Xellan",
+      "type": "Town",
+      "x": 838.0,
+      "y": 1276.96
+    },
+    {
+      "name": "Xenfalis Crossing",
+      "type": "Town",
+      "x": 448.0,
+      "y": 890.0
+    },
+    {
+      "name": "Xenshall",
+      "type": "Capital",
+      "x": 1316.0,
+      "y": 960.0
+    }
+  ]
+}
