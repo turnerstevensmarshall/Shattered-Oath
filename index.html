@@ -12,39 +12,23 @@
       background: rgba(20, 16, 12, 0.85);
       color: #e8d9b5;
       font-family: Georgia, "Times New Roman", serif;
-      padding: 6px 12px;
-      border: 1px solid #6b573a;
-      border-radius: 4px;
-      font-size: 16px;
-      letter-spacing: 0.5px;
+      padding: 6px 12px; border: 1px solid #6b573a; border-radius: 4px;
+      font-size: 16px; letter-spacing: 0.5px;
     }
-    .legend {
-      background: rgba(20, 16, 12, 0.85);
-      color: #e8d9b5;
-      font-family: Georgia, serif;
-      padding: 8px 12px;
-      border: 1px solid #6b573a;
-      border-radius: 4px;
-      font-size: 13px;
-      line-height: 1.6;
+    .leaflet-control-layers {
+      background: rgba(20, 16, 12, 0.9); color: #e8d9b5;
+      border: 1px solid #6b573a; font-family: Georgia, serif; font-size: 13px;
     }
-    .legend .dot {
-      display: inline-block; width: 12px; height: 12px;
-      border-radius: 50%; margin-right: 6px; border: 1px solid #000;
-      vertical-align: middle;
-    }
+    .leaflet-control-layers-expanded { padding: 8px 10px; }
+    .leaflet-control-layers label { color: #e8d9b5; }
     .site-label {
-      color: #f4e9c9;
-      font-family: Georgia, serif;
-      font-weight: bold;
+      color: #f4e9c9; font-family: Georgia, serif; font-weight: bold;
       text-shadow: 0 0 3px #000, 0 0 3px #000, 1px 1px 2px #000;
-      font-size: 13px;
+      font-size: 13px; background: transparent; border: none;
+      box-shadow: none; padding: 0; white-space: nowrap;
     }
     .site-label.capital { font-size: 15px; color: #ffe9a8; }
-    .leaflet-tooltip.site-label {
-      background: transparent; border: none; box-shadow: none; padding: 0;
-    }
-    .leaflet-tooltip.site-label:before { display: none; }
+    .leaflet-tooltip.site-label:before { display: none; border: none; }
   </style>
 </head>
 <body>
@@ -57,45 +41,51 @@
       Town:    { color: "#8fc7ff", radius: 5 },
       Default: { color: "#cfcfcf", radius: 5 }
     };
+    const TYPE_ORDER = ["Capital", "City", "Town"];
 
     fetch("markers.json?_=" + Date.now())
       .then(r => r.json())
       .then(data => {
         const W = data.width, H = data.height;
         const map = L.map("map", {
-          crs: L.CRS.Simple,
-          minZoom: -3,
-          maxZoom: 3,
-          zoomSnap: 0.25,
-          attributionControl: false
+          crs: L.CRS.Simple, minZoom: -3, maxZoom: 3,
+          zoomSnap: 0.25, attributionControl: false
         });
-
-        // image drawn between [0,0] (bottom-left) and [H,W] (top-right)
         const bounds = [[0, 0], [H, W]];
-        L.imageOverlay(data.image + "?_=" + (data.version || 1), bounds).addTo(map);
+        const imgFile = data.image || "WorldMap.jpg";
+        L.imageOverlay(imgFile + "?_=" + (data.version || 1), bounds).addTo(map);
         map.setMaxBounds([[-H * 0.2, -W * 0.2], [H * 1.2, W * 1.2]]);
         map.fitBounds(bounds);
 
+        const groups = {};
+        TYPE_ORDER.forEach(t => { groups[t] = L.layerGroup().addTo(map); });
+
         (data.markers || []).forEach(m => {
-          const st = TYPE_STYLE[m.type] || TYPE_STYLE.Default;
-          // pixel (x from left, y from top) -> CRS.Simple latlng [H - y, x]
+          const type = TYPE_ORDER.includes(m.type) ? m.type : "Town";
+          const st = TYPE_STYLE[type] || TYPE_STYLE.Default;
           const latlng = [H - m.y, m.x];
-          L.circleMarker(latlng, {
-            radius: st.radius,
-            color: "#1a1208",
-            weight: 1,
-            fillColor: st.color,
-            fillOpacity: 0.95
-          }).addTo(map)
-            .bindTooltip(m.name, {
-              permanent: true,
-              direction: "right",
-              className: "site-label" + (m.type === "Capital" ? " capital" : ""),
-              offset: [6, 0]
-            });
+          const marker = L.circleMarker(latlng, {
+            radius: st.radius, color: "#1a1208", weight: 1,
+            fillColor: st.color, fillOpacity: 0.95
+          }).bindTooltip(m.name, {
+            permanent: true, direction: "right",
+            className: "site-label" + (type === "Capital" ? " capital" : ""),
+            offset: [6, 0]
+          });
+          marker.addTo(groups[type]);
         });
 
-        // title badge
+        const overlays = {};
+        TYPE_ORDER.forEach(t => {
+          const swatch = TYPE_STYLE[t].color;
+          const label =
+            '<span style="display:inline-block;width:11px;height:11px;border-radius:50%;' +
+            'background:' + swatch + ';border:1px solid #000;margin-right:6px;' +
+            'vertical-align:middle"></span>' + t + "s";
+          overlays[label] = groups[t];
+        });
+        L.control.layers(null, overlays, { collapsed: false, position: "topright" }).addTo(map);
+
         const title = L.control({ position: "topleft" });
         title.onAdd = function () {
           const d = L.DomUtil.create("div", "title-badge");
@@ -103,23 +93,10 @@
           return d;
         };
         title.addTo(map);
-
-        // legend
-        const legend = L.control({ position: "bottomright" });
-        legend.onAdd = function () {
-          const d = L.DomUtil.create("div", "legend");
-          d.innerHTML =
-            '<span class="dot" style="background:#ffd24a"></span>Capital<br>' +
-            '<span class="dot" style="background:#ff9b3d"></span>City<br>' +
-            '<span class="dot" style="background:#8fc7ff"></span>Town';
-          return d;
-        };
-        legend.addTo(map);
       })
       .catch(err => {
         document.getElementById("map").innerHTML =
-          '<p style="color:#e8d9b5;font-family:serif;padding:20px">Could not load markers.json: ' +
-          err + '</p>';
+          '<p style="color:#e8d9b5;font-family:serif;padding:20px">Could not load markers.json: ' + err + '</p>';
       });
   </script>
 </body>
