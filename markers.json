@@ -2,7 +2,7 @@
   "image": "WorldMap.jpg",
   "width": 3072,
   "height": 2048,
-  "version": 1785347126,
+  "version": 1786389807,
   "markers": [
     {
       "name": "Anvilgate",
@@ -305,6 +305,18 @@
       "y": 1462.06
     },
     {
+      "name": "Leaf Ward",
+      "type": "POI",
+      "x": 1334.0,
+      "y": 761.0
+    },
+    {
+      "name": "Lens Ward",
+      "type": "POI",
+      "x": 1351.5,
+      "y": 752.5
+    },
+    {
       "name": "Lindin",
       "type": "City",
       "x": 2121.33,
@@ -453,6 +465,12 @@
       "type": "Town",
       "x": 1537.0,
       "y": 1665.33
+    },
+    {
+      "name": "Sun Ward",
+      "type": "POI",
+      "x": 1365.0,
+      "y": 769.0
     },
     {
       "name": "Sunmede",
